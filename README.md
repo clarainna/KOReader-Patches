@@ -1,6 +1,6 @@
 <b>2-download-button.lua:</b>
 
-A KOReader patch that adds a download button for easy access to Zlibrary and rakuyomi. 
+A KOReader patch that adds a download button for easy access to Zlibrary and rakuyomi. (Tested only on kobo, doesn't work on android)
 
 You can of course modify the file to add more plugins in the section or to delete plugins you do not have.
 
