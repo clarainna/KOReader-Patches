@@ -11,6 +11,7 @@ local function createDownloadTab()
         download = { icon = "appbar.download"},
     }
     ------------------------------------------------------------------
+    
     local DataStorage = require("datastorage")
     local logger = require("logger")
 
@@ -24,7 +25,7 @@ local function createDownloadTab()
             self.menu_items[k] =  v
         end
     end
-
+-----------------------------------------------------------editing the shortcuts you want in the download menu is done HERE------------------
     code = [[
         return {
             ["KOMenu:menu_buttons"] = {
@@ -37,15 +38,24 @@ local function createDownloadTab()
                 "main",
             },
             
-            
-            -- Add menu items to the new tabs
+            -- no need to remove items from their default position -- 
+    
+            -- Add menu items to the new tabs, you need to find the name used for each plugin to appear in the menu. 
+            -- in zlibrary plugin main.lua file it's here: 
+    --function Zlibrary:addToMainMenu(menu_items)
+    --if not self.ui.view then
+        --menu_items.zlibrary_main = {
+            --sorting_hint = "search",
+            --text = T("Z-library"),
+    
             download = { -- new download tab menu items
                 "zlibrary_main",
-                "rakuyomi",
+                "rakuyomi", -- if you do not have either plugin, delete the line here to not cause issues
             },
         }
     ]]
-
+--------------------------------------------------------------------------------------------------------------------
+    
     local filepath = DataStorage:getSettingsDir() .. "/filemanager_menu_order.lua"
 
     -- Try to read existing file
@@ -74,3 +84,4 @@ end
 -- Schedule to run after initialization
 local UIManager = require("ui/uimanager")
 UIManager:scheduleIn(0.1, createDownloadTab)
+
