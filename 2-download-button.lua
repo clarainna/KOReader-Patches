@@ -37,21 +37,8 @@ local function createDownloadTab()
                 "main",
             },
             
-        -- Remove menu items you want to add to new tab from old tabs while keeping the menu items you want to keep in the same location (--- comments out the line, removes the item)
-        --- tools = {
-                --- ...
-                --- "cloud_storage",
-                ---"move_to_archive",
-                --- "wallabag",
-                --- ...
-            ---},
-            search = {
-                --- ...
-                ---"zlibrary_main",
-                ---"rakuyomi",
-            },
             
-            -- Add removed menu items to the new tabs
+            -- Add menu items to the new tabs
             download = { -- new download tab menu items
                 "zlibrary_main",
                 "rakuyomi",
