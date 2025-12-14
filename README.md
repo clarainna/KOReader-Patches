@@ -9,3 +9,13 @@ Place the icon in koreader/icons and rename it appbar.download.svg/png for it to
 
 <img width="500" height="180" alt="FileManager_2025-11-12_105304" src="https://github.com/user-attachments/assets/49ebed1d-a6af-49d2-8940-dd75bd6d4288" />
 
+<b>2-reader-header-print-edition-with-other-info.lua</b>
+
+I prefer to have only my page number at the bottom of my screen, so I moved items such as clock, wifi and battery at the 
+top of the screen instead of the original page numbers. Font used in my case is Cinzel. Font can be changed my modifying this:
+    local header_font_face = "Cinzel-Regular.ttf"
+
+Text font is my own handwritting, which you can download in the main repository.
+
+<img width="1072" height="292" alt="Reader_The Time Travelers Wife (Au_ (Z-Library) epub_p514_2025-12-14_175559" src="https://github.com/user-attachments/assets/b72b3fd2-4762-43ee-8e42-cc8397e6b1a8" />
+
