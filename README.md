@@ -12,7 +12,7 @@ Place the icon in koreader/icons and rename it appbar.download.svg/png for it to
 <b>2-reader-header-print-edition-with-other-info.lua</b>
 
 I prefer to have only my page number at the bottom of my screen, so I moved items such as clock, wifi and battery at the 
-top of the screen instead of the original page numbers. Font used in my case is Cinzel. Font can be changed my modifying this:
+top of the screen instead of the original page numbers. <a href="https://fonts.google.com/specimen/Cinzel">Font used in my case is Cinzel</a>. Font can be changed my modifying this:
     local header_font_face = "Cinzel-Regular.ttf"
 
 Text font is my own handwritting, which you can download in the main repository.
