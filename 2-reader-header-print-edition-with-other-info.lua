@@ -46,7 +46,16 @@ local screen_width = Screen:getWidth()
 local screen_height = Screen:getHeight()
 local NetworkMgr = require("ui/network/manager")
 
+local ReaderFooter = require("apps/reader/modules/readerfooter")
+local ReaderUI = require("apps/reader/readerui")
+local UIManager = require("ui/uimanager")
 
+-- Override ReaderFooter to use custom font
+local original_ReaderFooter_init = ReaderFooter.init
+function ReaderFooter:init(...)
+    self.text_font_face = "Cinzel-Regular.ttf"  -- Change font here if desired
+    original_ReaderFooter_init(self, ...)
+end
 
 ReaderView.paintTo = function(self, bb, x, y)
     _ReaderView_paintTo_orig(self, bb, x, y)
@@ -61,7 +70,7 @@ ReaderView.paintTo = function(self, bb, x, y)
     -- local header_font_face = "ffont" -- this is the same font the footer uses
     -- header_font_face = "source/SourceSerif4-Regular.ttf" -- this is the serif font from Project: Title
     -- header_font_face = "smallcaps/LMRomanSC-Regular.otf" -- small caps style, you must supply this font yourself
-    local header_font_size = 12 -- Will use your footer setting if available
+    local header_font_size = 14 -- Will use your footer setting if available
     local header_font_bold = header_settings.text_font_bold or false -- Will use your footer setting if available
     --local header_font_color = Blitbuffer.COLOR_BLACK -- black is the default, but there's 15 other shades to try
     local header_font_color = Blitbuffer.COLOR_BLACK -- A nice dark gray, a bit lighter than black
