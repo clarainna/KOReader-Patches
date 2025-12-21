@@ -15,6 +15,8 @@ I prefer to have only my page number at the bottom of my screen, so I moved item
 top of the screen instead of the original page numbers. <a href="https://fonts.google.com/specimen/Cinzel">Font used in my case is Cinzel</a>. Font can be changed my modifying this:
     local header_font_face = "Cinzel-Regular.ttf"
 
+Update on 2025/12/21: patch now applies the same font to the footer. You need to change both manually if you are not using Cinzel.
+
 Text font is my own handwritting, which you can download in the main repository.
 
 <img width="1072" height="292" alt="Reader_The Time Travelers Wife (Au_ (Z-Library) epub_p514_2025-12-14_175559" src="https://github.com/user-attachments/assets/b72b3fd2-4762-43ee-8e42-cc8397e6b1a8" />
